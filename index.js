@@ -78,7 +78,6 @@ async function run() {
     app.post('/admission', upload.single('candidateImage'), async (req, res) => {
       try {
         const admissionData = {};
-        // Retrieve the admission data from the request body
         admissionFields.forEach((field) => {
           admissionData[field] = req.body[field];
         });
