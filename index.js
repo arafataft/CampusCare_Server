@@ -56,7 +56,7 @@ async function run() {
         console.log("College ID received:", id);
         const college = await CollegeDetails.findOne({ _id: new ObjectId(id) });
         if (!college) {
-          return res.status(404).json({ error: ' not found' });
+          return res.status(404).json({ error: 'college not found' });
         }
         res.json(college);
       } catch (error) {
